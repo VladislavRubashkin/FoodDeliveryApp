@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.main.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.main.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/accountContainerFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.main.AccountSignInSignUpContainerFragment"
+        android:label="fragment_account_container"
+        tools:layout="@layout/fragment_account_signin_signup_container" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/foodCategoryFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.main.FoodCategoryFragment"
+        android:label="fragment_food_category"
+        tools:layout="@layout/fragment_food_category" />
+    <fragment
+        android:id="@+id/foodItemFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.main.FoodItemFragment"
+        android:label="fragment_food_item"
+        tools:layout="@layout/fragment_food_item" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.auth.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.main.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+</navigation>
