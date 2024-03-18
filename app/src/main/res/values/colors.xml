@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="bottom_nav_view_background">#FFFFFF</color>
+    <color name="bottom_nav_selected_item">#220006</color>
+    <color name="bottom_nav_item">#B37E6D53</color>
 </resources>

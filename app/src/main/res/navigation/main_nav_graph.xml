@@ -3,33 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/menuFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.main.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_foodCategoryFragment"
+            app:destination="@id/foodCategoryFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.main.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
-        android:id="@+id/accountContainerFragment"
+        android:id="@+id/accountSignInSignUpContainerFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.main.AccountSignInSignUpContainerFragment"
         android:label="fragment_account_container"
-        tools:layout="@layout/fragment_account_signin_signup_container" />
+        tools:layout="@layout/fragment_account_signin_signup_container" >
+        <action
+            android:id="@+id/action_accountContainerFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_accountContainerFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_accountContainerFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/foodCategoryFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.main.FoodCategoryFragment"
         android:label="fragment_food_category"
-        tools:layout="@layout/fragment_food_category" />
+        tools:layout="@layout/fragment_food_category" >
+        <action
+            android:id="@+id/action_foodCategoryFragment_to_foodItemFragment"
+            app:destination="@id/foodItemFragment" />
+    </fragment>
     <fragment
         android:id="@+id/foodItemFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.main.FoodItemFragment"
@@ -39,12 +61,20 @@
         android:id="@+id/signInFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.auth.SignInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" />
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_accountSignInSignUpContainerFragment"
+            app:destination="@id/accountSignInSignUpContainerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.auth.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_accountSignInSignUpContainerFragment"
+            app:destination="@id/accountSignInSignUpContainerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.main.AccountFragment"
