@@ -29,5 +29,12 @@ class FoodCategoryFragment : Fragment() {
         binding.button2.setOnClickListener {
             findNavController().navigate(R.id.action_foodCategoryFragment_to_foodItemFragment)
         }
+        backToMenu()
+    }
+
+    private fun backToMenu() {
+        binding.ibBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 }

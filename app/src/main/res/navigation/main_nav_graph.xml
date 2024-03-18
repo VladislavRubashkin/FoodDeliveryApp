@@ -12,7 +12,12 @@
         tools:layout="@layout/fragment_menu" >
         <action
             android:id="@+id/action_menuFragment_to_foodCategoryFragment"
-            app:destination="@id/foodCategoryFragment" />
+            app:destination="@id/foodCategoryFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
@@ -26,13 +31,25 @@
         tools:layout="@layout/fragment_account_signin_signup_container" >
         <action
             android:id="@+id/action_accountContainerFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_accountContainerFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment" />
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_accountContainerFragment_to_accountFragment"
-            app:destination="@id/accountFragment" />
+            app:destination="@id/accountFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -41,7 +58,9 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/foodCategoryFragment"
@@ -50,7 +69,12 @@
         tools:layout="@layout/fragment_food_category" >
         <action
             android:id="@+id/action_foodCategoryFragment_to_foodItemFragment"
-            app:destination="@id/foodItemFragment" />
+            app:destination="@id/foodItemFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/foodCategoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/foodItemFragment"
@@ -64,7 +88,11 @@
         tools:layout="@layout/fragment_sign_in" >
         <action
             android:id="@+id/action_signInFragment_to_accountSignInSignUpContainerFragment"
-            app:destination="@id/accountSignInSignUpContainerFragment" />
+            app:destination="@id/accountSignInSignUpContainerFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -73,11 +101,30 @@
         tools:layout="@layout/fragment_sign_up" >
         <action
             android:id="@+id/action_signUpFragment_to_accountSignInSignUpContainerFragment"
-            app:destination="@id/accountSignInSignUpContainerFragment" />
+            app:destination="@id/accountSignInSignUpContainerFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.example.fooddeliveryapp.presentation.screens.auth.AccountFragment"
         android:label="fragment_account"
-        tools:layout="@layout/fragment_account" />
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_accountFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
 </navigation>

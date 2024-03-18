@@ -22,7 +22,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_holder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,17 +30,23 @@
         app:cardElevation="12dp"
         app:cardCornerRadius="8dp">
 
+        <!-- TODO№2
+        android:layout_height="70dp" - изменить на адаптивный размер,
+        буз изменения размера фактического-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         app:menu="@menu/main_menu"
+        app:itemIconSize="28dp"
+        app:itemRippleColor="@color/bottom_nav_item"
         app:itemIconTint="@drawable/bottom_nav_selector_colors"
         app:itemTextColor="@drawable/bottom_nav_selector_colors"
         app:backgroundTint="@color/bottom_nav_view_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:labelVisibilityMode="unlabeled"
         android:visibility="gone"
         tools:visibility="visible"
         />

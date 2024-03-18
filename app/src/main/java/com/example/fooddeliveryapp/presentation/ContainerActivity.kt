@@ -15,7 +15,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 /**
- * TODO !!!!!ПРИ СОЗДАНИИ НОВОЙ ВЕТКИ В Git, ПЕРЕКЛЮЧАТЬСЯ ОБРАТНО В Master И ДЕЛАТЬ New Branch ОТ НЕЁ!!!!!
+ * TODO№0 !!!!!ПРИ СОЗДАНИИ НОВОЙ ВЕТКИ В Git, ПЕРЕКЛЮЧАТЬСЯ ОБРАТНО В Master И ДЕЛАТЬ New Branch ОТ НЕЁ!!!!!
  */
 
 class ContainerActivity : AppCompatActivity() {
@@ -30,7 +30,7 @@ class ContainerActivity : AppCompatActivity() {
 
         setupNavigationMenu()
         lifecycleScope.launch {
-            bottomNavigationViewVisible()
+            bottomNavigationViewVisibility()
         }
     }
 
@@ -41,7 +41,7 @@ class ContainerActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(bottomNavigationView, navController)
     }
 
-    private suspend fun bottomNavigationViewVisible() {
+    private suspend fun bottomNavigationViewVisibility() {
         delay(Constants.DELAY)
         binding.bottomNavigationView.visibility = View.VISIBLE
     }
