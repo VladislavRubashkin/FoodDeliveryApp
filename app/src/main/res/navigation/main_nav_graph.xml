@@ -77,7 +77,7 @@
     </fragment>
     <fragment
         android:id="@+id/accountFragment"
-        android:name="com.example.fooddeliveryapp.presentation.screens.main.AccountFragment"
+        android:name="com.example.fooddeliveryapp.presentation.screens.auth.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
 </navigation>

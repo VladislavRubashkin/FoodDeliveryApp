@@ -6,4 +6,6 @@
     <color name="bottom_nav_view_background">#FFFFFF</color>
     <color name="bottom_nav_selected_item">#220006</color>
     <color name="bottom_nav_item">#B37E6D53</color>
+    <color name="icon_background">#D3BF12</color>
+
 </resources>
