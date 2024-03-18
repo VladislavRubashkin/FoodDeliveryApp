@@ -5,16 +5,16 @@
         android:id="@+id/menuFragment"
         android:title="@string/menu"
         android:icon="@drawable/ic_food"
-        android:orderInCategory="1"/>
+        />
     <item
         android:id="@+id/accountSignInSignUpContainerFragment"
         android:title="@string/account"
         android:icon="@drawable/ic_account"
-        android:orderInCategory="2"/>
+        />
     <item
         android:id="@+id/cartFragment"
         android:title="@string/cart"
         android:icon="@drawable/ic_cart_shopping"
-        android:orderInCategory="3"/>
+        />
 
 </menu>
