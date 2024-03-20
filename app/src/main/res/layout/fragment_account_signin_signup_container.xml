@@ -6,47 +6,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.screens.main.AccountSignInSignUpContainerFragment">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Account SignIn SignUp Container Fragment"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/account_signin_signup_container_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
 
     <Button
-        android:id="@+id/buttonSignUp"
+        android:id="@+id/b_sign_in_dir"
+        style="@style/GlobalTextInputStyle.Big"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Navigete to SignUp Fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/action_sign_in"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginTop="@dimen/top_space"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/b_sign_up_dir"
+        app:layout_constraintVertical_chainStyle="packed"/>
 
     <Button
-        android:id="@+id/buttonSignIn"
+        android:id="@+id/b_sign_up_dir"
+        style="@style/GlobalTextInputStyle.Big"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Navigete to SignIn Fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/action_sign_up"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginTop="@dimen/top_space_min"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp"
-        app:layout_constraintVertical_bias="0.138" />
+        app:layout_constraintTop_toBottomOf="@id/b_sign_in_dir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
 
-    <Button
-        android:id="@+id/buttonAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Navigete to Account Fragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn"
-        app:layout_constraintVertical_bias="0.271" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

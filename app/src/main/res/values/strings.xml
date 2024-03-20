@@ -1,9 +1,30 @@
 <resources>
     <string name="app_name">FoodDeliveryApp</string>
+
+    // menu, cart
     <string name="menu">Menu</string>
     <string name="account">Account</string>
     <string name="cart">Cart</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="back">Back</string>
+    // food_category, food_item
+    <string name="go_back">Back</string>
+
+    // sign_up, sign_in
+    <string name="action_sign_up">Sign up</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_phone_number">Phone number</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_repeat_password">Repeat_password</string>
+    <string name="action_sign_in">Sign in</string>
+
+    // food_item
+    <string name="add_to_cart">Add to cart</string>
+
+    // account
+    <string name="logout">Logout</string>
+    <string name="delete_account">Delete account</string>
+    <string name="history_of_orders">History of orders</string>
+
+    // cart
+    <string name="place_your_order">Place your order</string>
 </resources>

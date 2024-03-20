@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.screens.main.FoodItemFragment">
+    tools:context=".presentation.screens.main.FoodItemFragment"
+    android:padding="5dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -23,21 +24,89 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:background="?attr/selectableItemBackground"
-            android:contentDescription="@string/back"
+            android:contentDescription="@string/go_back"
             android:clickable="true"
             android:focusable="true"
             app:rippleColor="@color/black"
-            app:srcCompat="@drawable/ic_bottom_back"
+            app:srcCompat="@drawable/ic_button_back"
             />
     </androidx.cardview.widget.CardView>
 
-    <TextView
+    <ImageView
+        android:id="@+id/iv_item_food_full"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        android:src="@drawable/pizza_category_test"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Food item Fragment"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пицца пеперонни"
+        android:layout_margin="@dimen/space"
+        android:paddingStart="@dimen/padding_space"
+        android:paddingEnd="@dimen/padding_space"
+        android:textSize="@dimen/text_view_text_size"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        />
+
+    <TextView
+        android:id="@+id/tv_item_food_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="550 гр"
+        android:layout_margin="@dimen/space"
+        android:paddingStart="@dimen/padding_space"
+        android:paddingEnd="@dimen/padding_space"
+        android:textSize="@dimen/text_view_text_size"
+        android:textColor="@color/text_color_grey"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_food_name"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_food_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пепперони, Сыр Моцарелла, Чеснок, Томатный соус"
+        android:layout_margin="@dimen/space"
+        android:paddingStart="@dimen/padding_space"
+        android:paddingEnd="@dimen/padding_space"
+        android:textSize="@dimen/text_view_text_size"
+        android:textColor="@color/text_color_grey"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_food_weight"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/b_add"
+        style="@style/GlobalTextInputStyle.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_space"
+        android:text="@string/add_to_cart"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginStart="@dimen/side_space"
+        android:layout_marginEnd="@dimen/side_space"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_food_description"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
