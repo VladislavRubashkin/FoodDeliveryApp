@@ -26,8 +26,11 @@ class SignInFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //test
-        binding.buttonBackToAccountSignUpSignInContainer.setOnClickListener {
-            findNavController().navigate(R.id.action_signInFragment_to_accountSignInSignUpContainerFragment)
+        binding.bSignIn.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_accountFragment)
+        }
+        binding.bSignUpDir.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
         }
     }
 

@@ -7,12 +7,88 @@
     tools:context=".presentation.screens.auth.AccountFragment">
 
     <TextView
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Account Fragment"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/top_space"
+        android:text="Владислав"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_view_text_size_big"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_phone_number"/>
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_space_min"
+        android:text="8 904 602 44 66"
+        android:textColor="@color/text_color_grey"
+        android:textSize="@dimen/text_view_text_size_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        />
+
+    <Button
+        android:id="@+id/b_logout"
+        style="@style/GlobalTextInputStyle.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_space_min"
+        android:text="@string/logout"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginStart="@dimen/side_space"
+        android:layout_marginEnd="@dimen/side_space"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/b_delete_account"/>
+
+    <Button
+        android:id="@+id/b_delete_account"
+        style="@style/GlobalTextInputStyle.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_space_medium"
+        android:text="@string/delete_account"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginStart="@dimen/side_space"
+        android:layout_marginEnd="@dimen/side_space"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_history_of_orders"/>
+
+    <TextView
+        android:id="@+id/tv_history_of_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history_of_orders"
+        android:textColor="@color/text_color_grey"
+        android:textSize="@dimen/text_view_text_size_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_view_category_food"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/order"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,14 +6,73 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.screens.main.CartFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/tv_phone_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cart Fragment"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/bottom_space_min"
+        android:text="@string/cart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_view_text_size_big"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_view_category_food"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/guideline_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_food"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"
+        />
+
+    <TextView
+        android:id="@+id/tv_sum_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/bottom_space_medium"
+        android:layout_marginEnd="10dp"
+        android:text="1250"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_view_text_size_big"
+        app:layout_constraintTop_toTopOf="@+id/b_place_order"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/b_place_order"
+        app:layout_constraintEnd_toStartOf="@id/b_place_order"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/b_place_order"
+        style="@style/GlobalTextInputStyle.Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/bottom_space_medium"
+        android:layout_marginTop="@dimen/top_space_min"
+        android:text="@string/place_your_order"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_bottom"
+        app:layout_constraintStart_toEndOf="@id/tv_sum_order"
+        app:layout_constraintVertical_chainStyle="packed"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
