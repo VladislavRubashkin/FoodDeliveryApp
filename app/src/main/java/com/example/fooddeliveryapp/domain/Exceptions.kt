@@ -10,6 +10,13 @@ open class AppException : RuntimeException {
 }
 
 /**
+ * Ошибка обращения к элементам View когда/уже их не существует.
+ */
+class BindingException(
+    val exception: String
+): AppException()
+
+/**
  * Ошибка ввода пустых полей, при входе в аккаунт.
  */
 class EmptyFieldException(
@@ -43,14 +50,14 @@ class ParseBackendResponseException(cause: Throwable) : AppException(cause = cau
 /**
  * Обёртка backend для ошибок.
  */
-internal suspend fun <T> wrapBackendExceptions(block: suspend () -> T): T {
-    try {
-      return block.invoke()
-    } catch (e: BackendException) {
-        if(e.code == 401) {
-            throw AuthException(e)
-        } else {
-            throw e
-        }
-    }
-}
+//internal suspend fun <T> wrapBackendExceptions(block: suspend () -> T): T {
+//    try {
+//      return block.invoke()
+//    } catch (e: BackendException) {
+//        if(e.code == 401) {
+//            throw AuthException(e)
+//        } else {
+//            throw e
+//        }
+//    }
+//}

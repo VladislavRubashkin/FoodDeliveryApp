@@ -1,4 +1,4 @@
-package com.example.fooddeliveryapp.presentation.screens.main
+package com.example.fooddeliveryapp.presentation.screens.unused
 
 import android.os.Bundle
 import android.view.LayoutInflater
