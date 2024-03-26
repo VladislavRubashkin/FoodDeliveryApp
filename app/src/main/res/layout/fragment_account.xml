@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.screens.auth.AccountFragment">
+    tools:context=".presentation.screens.main.AccountFragment">
 
     <TextView
         android:id="@+id/tv_name"
@@ -31,6 +31,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_name"
+        />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_space_min"
+        android:text="пр Стачек дом 103 корпус 2 квартира 555"
+        android:textColor="@color/text_color_grey"
+        android:textSize="@dimen/text_view_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone_number"
         />
 
     <Button

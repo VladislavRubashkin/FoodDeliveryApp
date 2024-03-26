@@ -1,6 +1,4 @@
-package com.example.fooddeliveryapp.domain.models.order
-
-import com.example.fooddeliveryapp.domain.models.product.Product
+package com.example.fooddeliveryapp.domain.models
 
 data class Order(
     val id: Int,

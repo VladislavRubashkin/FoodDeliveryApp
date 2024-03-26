@@ -1,4 +1,4 @@
-package com.example.fooddeliveryapp.presentation
+package com.example.fooddeliveryapp.presentation.screens
 
 import android.os.Bundle
 import android.view.View

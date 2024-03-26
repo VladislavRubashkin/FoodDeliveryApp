@@ -1,6 +1,6 @@
-package com.example.fooddeliveryapp.domain.models.useraccount
+package com.example.fooddeliveryapp.domain.models
 
-import com.example.fooddeliveryapp.domain.models.order.Order
+import com.example.fooddeliveryapp.domain.models.Order
 
 data class UserAccount(
     val id: Int,

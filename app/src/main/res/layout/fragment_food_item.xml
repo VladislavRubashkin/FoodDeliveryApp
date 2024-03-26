@@ -83,17 +83,17 @@
 
     <TextView
         android:id="@+id/tv_item_food_description"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Пепперони, Сыр Моцарелла, Чеснок, Томатный соус"
         android:layout_margin="@dimen/space"
         android:paddingStart="@dimen/padding_space"
         android:paddingEnd="@dimen/padding_space"
-        android:textSize="@dimen/text_view_text_size"
+        android:text="Пепперони, Сыр Моцарелла, Чеснок, Томатный соус"
         android:textColor="@color/text_color_grey"
-        app:layout_constraintTop_toBottomOf="@id/tv_item_food_weight"
+        android:textSize="@dimen/text_view_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/tv_item_food_weight" />
 
     <Button
         android:id="@+id/b_add"

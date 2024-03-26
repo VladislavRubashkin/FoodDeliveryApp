@@ -1,4 +1,4 @@
-package com.example.fooddeliveryapp.presentation.screens.auth
+package com.example.fooddeliveryapp.presentation.screens.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
